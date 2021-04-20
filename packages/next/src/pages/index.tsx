@@ -10,7 +10,7 @@ export default function Index() {
         <title>NextJS</title>
       </Head>
       <HelloWorld />
-      <Link href="/about">About</Link> | <Link href="/news">News</Link>
+      <Link href="/news">News</Link>
     </>
   );
 }
