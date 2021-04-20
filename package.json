@@ -1,0 +1,12 @@
+{
+  "name": "gatsbu-next",
+  "description": "Compare Gatsby vs NextJS",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "@nighttrax/eslint-config-tsx": "~8.0.5",
+    "@tdd-buffet/tsconfig": "~1.0.4",
+    "eslint": "~7.24.0",
+    "typescript": "~4.2.4"
+  }
+}

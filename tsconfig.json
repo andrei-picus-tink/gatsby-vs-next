@@ -1,0 +1,12 @@
+{
+  "extends": "@tdd-buffet/tsconfig",
+
+  "compilerOptions": {
+    "jsx": "react",
+
+    "baseUrl": ".",
+    "paths": {
+      "@kaizen/core/*": ["packages/core/src/*"]
+    }
+  }
+}
