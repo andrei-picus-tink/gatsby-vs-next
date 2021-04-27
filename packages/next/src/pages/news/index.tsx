@@ -2,10 +2,9 @@ import React from "react";
 import { GetStaticProps } from "next";
 import { NewsExcerpt, newsService } from "@kaizen/core/services/news";
 import Link from "next/link";
+import { ArticleList } from "@kaizen/core/components/ArticleList";
 
-type Props = {
-  articles: NewsExcerpt[];
-};
+type Props = { articles: NewsExcerpt[] };
 
 export const getStaticProps: GetStaticProps<Props> = async () => ({
   props: {
@@ -16,14 +15,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => ({
 export default function LatestNews({ articles }: Props) {
   return (
     <>
-      <h1>Misadventures of Florida Man</h1>
-      <ul>
-        {articles.map((article) => (
-          <li key={article.slug}>
-            <Link href={`/news/${article.slug}`}>{article.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <ArticleList articles={articles} LinkComponent={Link} />
       <Link href="/">Home</Link>
     </>
   );

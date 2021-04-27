@@ -1,6 +1,7 @@
 import React from "react";
 import { NewsExcerpt } from "@kaizen/core/services/news";
 import { graphql, Link } from "gatsby";
+import { ArticleList } from "@kaizen/core/components/ArticleList";
 
 type Props = {
   data: {
@@ -15,14 +16,10 @@ type Props = {
 export default function LatestNews({ data }: Props) {
   return (
     <>
-      <h1>Misadventures of Florida Man</h1>
-      <ul>
-        {data.allArticle.edges.map(({ node }) => (
-          <li key={node.slug}>
-            <Link to={node.slug}>{node.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <ArticleList
+        articles={data.allArticle.edges.map(({ node }) => node)}
+        LinkComponent={(props) => <Link to={props.href}>{props.children}</Link>}
+      />
       <Link to="/">Home</Link>
     </>
   );
