@@ -1,5 +1,5 @@
 import React from "react";
-import { NewsExcerpt } from "../../../../core/src/services/news";
+import { NewsExcerpt } from "@kaizen/core/services/news";
 import { graphql, Link } from "gatsby";
 
 type Props = {

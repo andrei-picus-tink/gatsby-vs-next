@@ -4,3 +4,7 @@ require("ts-node").register({
     target: "es6",
   },
 });
+
+module.exports = {
+  plugins: ["gatsby-plugin-tsconfig-paths"],
+};

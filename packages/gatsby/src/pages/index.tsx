@@ -1,5 +1,5 @@
 import React from "react";
-import { HelloWorld } from "../../../core/src/components/HelloWorld";
+import { HelloWorld } from "@kaizen/core/components/HelloWorld";
 import { Link } from "gatsby";
 
 export default function Index() {

@@ -1,6 +1,6 @@
 import React from "react";
-import { NewsArticle } from "../../../../core/src/services/news";
-import { Article } from "../../../../core/src/components/Article";
+import { NewsArticle } from "@kaizen/core/services/news";
+import { Article } from "@kaizen/core/components/Article";
 import { graphql, Link } from "gatsby";
 
 type Props = {
